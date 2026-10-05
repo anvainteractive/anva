@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANVA — Official Website</title>
+  <meta name="description" content="The official home of ANVA — games, status, events and support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-line loader-line--top"></span>
+      <h1 class="loader-wordmark">ANVA</h1>
+      <span class="loader-line loader-line--bottom"></span>
+      <p class="loader-sub">Entering the Horizon</p>
+      <div class="loader-bar"><span id="loaderFill"></span></div>
+      <p class="loader-percent" id="loaderPercent">0%</p>
+    </div>
+  </div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand" data-tab="home">
+        <span class="brand-mark">ANVA</span>
+        <span class="brand-sub">Official</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <span class="nav-indicator" id="navIndicator"></span>
+        <a href="#home" data-tab="home" class="nav-link">Home</a>
+        <a href="#status" data-tab="status" class="nav-link">Status</a>
+        <a href="#genius" data-tab="genius" class="nav-link">Genius Hub</a>
+        <a href="#events" data-tab="events" class="nav-link">Events</a>
+        <a href="#hub" data-tab="hub" class="nav-link">ANVA Hub</a>
+      </nav>
+
+      <a href="https://discord.gg/VMM2MMKYe4" target="_blank" rel="noopener" class="nav-cta">Join Discord</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+  </header>
+
+  <main>
+
+    <!-- ============ HOME ============ -->
+    <section class="tab" id="tab-home" data-tab-panel="home">
+      <div class="hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="hero-glow" id="heroGlow"></div>
+        <div class="hero-rings"><span></span><span></span><span></span></div>
+        <div class="hero-horizon"></div>
+        <p class="eyebrow hero-in" style="--d:0">Welcome to</p>
+        <h2 class="hero-title">ANVA</h2>
+        <div class="hero-divider hero-in" style="--d:3"><span></span><em>Est. on Roblox</em><span></span></div>
+        <p class="hero-text hero-in" style="--d:4">
+          We build immersive Roblox experiences — from the luxury of
+          <strong>ANVA Horizon Resort</strong> to the busy kitchens of <strong>Snack World</strong>.
+          This is the central place for our updates, game status, events and support.
+        </p>
+        <div class="hero-actions hero-in" style="--d:5">
+          <a href="https://discord.gg/VMM2MMKYe4" target="_blank" rel="noopener" class="btn btn-gold">Join the ANVA Discord</a>
+          <a href="#hub" data-tab="hub" class="btn btn-ghost">Latest News</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Our Projects</p>
+          <h3 class="section-title">What we're building</h3>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card project">
+            <span class="project-tag tag-live">Live</span>
+            <h4>ANVA Horizon Resort</h4>
+            <p>Our flagship hotel & resort experience. Check in, relax, work your way up the staff team.</p>
+          </article>
+          <article class="card project">
+            <span class="project-tag tag-dev">In Development</span>
+            <h4>ANVA</h4>
+            <p>A brand-new club experience — music, lights and nights to remember. Coming soon.</p>
+          </article>
+          <article class="card project">
+            <span class="project-tag tag-dev">In Development</span>
+            <h4>Snack World</h4>
+            <p>A realistic restaurant job game. Cook, serve and run the busiest snack spot in town.</p>
+          </article>
+        </div>
+
+        <div class="section-head">
+          <p class="eyebrow">Community</p>
+          <h3 class="section-title">Join us on Discord</h3>
+        </div>
+
+        <div class="grid grid-2">
+          <a class="card discord-card" href="https://discord.gg/VMM2MMKYe4" target="_blank" rel="noopener">
+            <div class="discord-icon">
+              <svg viewBox="0 0 24 24"><path d="M20.3 4.4A19.6 19.6 0 0 0 15.4 3l-.6 1.3a18.2 18.2 0 0 0-5.6 0L8.6 3a19.5 19.5 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18a19.8 19.8 0 0 0 6 3l1.3-2.1a12.8 12.8 0 0 1-2-1l.5-.4a14 14 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.7 19.7 0 0 0 6-3c.5-5.1-.8-9.6-3.6-13.6ZM8 15.3c-1.2 0-2.1-1.1-2.1-2.4S6.8 10.5 8 10.5s2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Zm8 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4Z"/></svg>
+            </div>
+            <div>
+              <h4>ANVA Main Discord</h4>
+              <p>Announcements, applications, sneak peeks and our community.</p>
+              <span class="link-arrow">Join server →</span>
+            </div>
+          </a>
+          <a class="card discord-card" href="https://discord.gg/q6mGntNMZV" target="_blank" rel="noopener">
+            <div class="discord-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15h-2v-2h2v2Zm2.1-7.7-.9.9c-.7.7-1.2 1.3-1.2 2.8h-2v-.5c0-1.1.5-2.1 1.2-2.8l1.2-1.3a2 2 0 1 0-3.4-1.4H8a4 4 0 1 1 7.1 2.3Z"/></svg>
+            </div>
+            <div>
+              <h4>Genius Hub</h4>
+              <p>ANVA's assistance hub. Questions, problems or reports — our team is here to help.</p>
+              <span class="link-arrow">Get support →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATUS ============ -->
+    <section class="tab" id="tab-status" data-tab-panel="status">
+      <div class="container">
+        <div class="page-head">
+          <p class="eyebrow">System Status</p>
+          <h2 class="page-title">Status</h2>
+          <p class="page-text">Live overview of all ANVA games, servers and systems.</p>
+        </div>
+
+        <!-- Filled automatically from STATUS_CONFIG in script.js -->
+        <div class="status-banner" id="statusBanner"></div>
+        <div class="status-legend" id="statusLegend"></div>
+        <div id="statusGroups"></div>
+
+        <p class="note">Experiencing a problem that isn't listed here? Let us know in the
+          <a href="https://discord.gg/q6mGntNMZV" target="_blank" rel="noopener">Genius Hub</a>.</p>
+      </div>
+    </section>
+
+    <!-- ============ GENIUS HUB ============ -->
+    <section class="tab" id="tab-genius" data-tab-panel="genius">
+      <div class="container narrow">
+        <div class="page-head">
+          <p class="eyebrow">Help & Support</p>
+          <h2 class="page-title">Genius Hub</h2>
+          <p class="page-text">Frequently asked questions — tap a question to see the answer.</p>
+        </div>
+
+        <div class="faq" id="faq">
+          <div class="faq-item">
+            <button class="faq-q">How can I apply for Management at ANVA Horizon Resort?<span class="faq-icon"></span></button>
+            <div class="faq-a"><p>Management applications are opened from time to time. When they are open, the application link is posted in the <strong>general announcements</strong> channel of the ANVA Main Discord. Make sure you're in the server and have notifications on so you don't miss it.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">How do I become staff in one of your games?<span class="faq-icon"></span></button>
+            <div class="faq-a"><p>Most staff positions start through trainings. Training times and requirements are announced in the ANVA Main Discord. Our Training Hubs are currently in development and will make this even easier soon.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">I found a bug. Where do I report it?<span class="faq-icon"></span></button>
+            <div class="faq-a"><p>Please report bugs in the Genius Hub Discord. Include the game, what happened, and — if possible — a screenshot or clip. That helps our developers fix it faster.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">How do I report a player?<span class="faq-icon"></span></button>
+            <div class="faq-a"><p>Open a ticket in the Genius Hub and include the player's username, what happened and any evidence you have. Our team will review it as soon as possible.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Can I appeal a ban or warning?<span class="faq-icon"></span></button>
+            <div class="faq-a"><p>Yes. Open a ticket in the Genius Hub, explain your situation honestly and our team will take another look at your case.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">When will Snack World and the ANVA club game release?<span class="faq-icon"></span></button>
+            <div class="faq-a"><p>Both games are currently in development. There is no release date yet — all news will be posted in the ANVA Hub on this website and in our Main Discord first.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Where can I check if a game is down?<span class="faq-icon"></span></button>
+            <div class="faq-a"><p>Visit the <a href="#status" data-tab="status">Status</a> tab. It shows the current state of all our games, Discord servers and systems.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">Is ANVA affiliated with Roblox?<span class="faq-icon"></span></button>
+            <div class="faq-a"><p>No. ANVA is an independent group creating experiences on the Roblox platform. We are not affiliated with or endorsed by Roblox Corporation.</p></div>
+          </div>
+        </div>
+
+        <div class="help-box card">
+          <div>
+            <h4>Still need help?</h4>
+            <p>Couldn't find your answer or running into a problem? Join the <strong>Genius Hub</strong> — our assistance server — and our team will help you out.</p>
+          </div>
+          <a href="https://discord.gg/q6mGntNMZV" target="_blank" rel="noopener" class="btn btn-gold">Open Genius Hub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTS ============ -->
+    <section class="tab" id="tab-events" data-tab-panel="events">
+      <div class="container">
+        <div class="page-head">
+          <p class="eyebrow">What's happening</p>
+          <h2 class="page-title">Events</h2>
+          <p class="page-text">Upcoming and active events across all ANVA games.</p>
+        </div>
+
+        <article class="event card">
+          <div class="event-visual">
+            <div class="stars"></div>
+            <div class="moon"></div>
+            <div class="fog"></div>
+            <div class="bats"><i></i><i></i><i></i></div>
+            <span class="event-badge">Upcoming</span>
+          </div>
+          <div class="event-body">
+            <p class="eyebrow">Seasonal Event</p>
+            <h3>Halloween Event 2026</h3>
+            <p>This October, Halloween comes to <strong>every ANVA game</strong>. Expect spooky decorations, themed activities and a few surprises hidden around our worlds. More details will be announced in the ANVA Hub and our Discord.</p>
+            <ul class="event-games">
+              <li>ANVA Horizon Resort</li>
+              <li>ANVA</li>
+              <li>Snack World</li>
+            </ul>
+            <div class="countdown" id="countdown">
+              <div><span id="cdDays">00</span><small>Days</small></div>
+              <div><span id="cdHours">00</span><small>Hours</small></div>
+              <div><span id="cdMins">00</span><small>Minutes</small></div>
+              <div><span id="cdSecs">00</span><small>Seconds</small></div>
+            </div>
+            <p class="countdown-label">Countdown to Halloween</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ANVA HUB ============ -->
+    <section class="tab" id="tab-hub" data-tab-panel="hub">
+      <div class="container narrow">
+        <div class="page-head">
+          <p class="eyebrow">News & Updates</p>
+          <h2 class="page-title">ANVA Hub</h2>
+          <p class="page-text">Official posts from the ANVA team.</p>
+        </div>
+
+        <!-- Filled automatically from POSTS_CONFIG in script.js -->
+        <div class="feed" id="feed"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="brand-mark small">ANVA</span>
+      <p>© <span id="year"></span> ANVA. Not affiliated with Roblox Corporation.</p>
+      <div class="footer-links">
+        <a href="https://discord.gg/VMM2MMKYe4" target="_blank" rel="noopener">Main Discord</a>
+        <a href="https://discord.gg/q6mGntNMZV" target="_blank" rel="noopener">Genius Hub</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
